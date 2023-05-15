@@ -31,7 +31,8 @@ void main() {
       expect(model.originalTitle, mock['original_title']);
       expect(model.overview, mock['overview']);
       expect(model.popularity, mock['popularity']);
-      expect(model.posterPath, mock['poster_path']);
+      expect(model.posterPath,
+          'https://image.tmdb.org/t/p/w500${mock['poster_path']}');
       expect(model.releaseDate, mock['release_date']);
       expect(model.title, mock['title']);
       expect(model.video, mock['video']);

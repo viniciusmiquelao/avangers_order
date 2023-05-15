@@ -8,6 +8,7 @@ environment:
 
 
 dependencies:
+  cached_network_image: ^3.2.3
   device_preview: ^1.1.0
   dio: ^5.1.2
   equatable: ^2.0.5
@@ -19,23 +20,48 @@ dependencies:
   flutter_modular: ^5.0.3
   flutter_svg: ^2.0.5
   cupertino_icons: ^1.0.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
   http_mock_adapter: ^0.4.4
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.1
-  flutter_native_splash: ^2.2.0+1
+  hive_test: ^1.0.1
+  flutter_native_splash: ^2.2.19
   mocktail: ^0.3.0
-  flutter_launcher_icons: ^0.9.3
+  flutter_launcher_icons: ^0.13.1
   modular_test: ^2.0.0
   bloc_test: ^9.0.0-dev.1
   network_image_mock: ^2.1.1
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/marvel.png
+  android: true
+  ios: true
+
+flutter_icons:
+  android_12:
+    image: assets/images/marvel.png
+    color: "#FFFFFF"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: assets/images/marvel.png
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: assets/images/marvel.png
+  fullscreen: true
 
 flutter:
   uses-material-design: true
   assets:
     - assets/mocks/
+    - assets/langs/
+    - assets/icons/
+    - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

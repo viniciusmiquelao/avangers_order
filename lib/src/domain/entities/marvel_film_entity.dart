@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 class MarvelFilmEntity extends Equatable {
   final bool adult;
   final String backdropPath;
-  final List<int> genreIds;
+  final List<dynamic> genreIds;
   final int id;
   final String originalLanguage;
   final String originalTitle;

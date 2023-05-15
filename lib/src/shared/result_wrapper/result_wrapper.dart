@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields, unused_field
+
 import '../errors/base_error.dart';
 
 abstract class Result<T> {
@@ -38,7 +40,6 @@ class ResultError<E> extends Result<E> {
 }
 
 class ResultErrorList<E> extends Result<E> {
-  // ignore: unused_field
   final List<BaseError> _errors;
 
   ResultErrorList(this._errors) : super(_errors);

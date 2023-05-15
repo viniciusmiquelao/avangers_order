@@ -29,7 +29,8 @@ class MarvelFilmModel extends MarvelFilmEntity {
     data['original_title'] = originalTitle;
     data['overview'] = overview;
     data['popularity'] = popularity;
-    data['poster_path'] = posterPath;
+    data['poster_path'] =
+        posterPath.replaceAll('https://image.tmdb.org/t/p/w500', '');
     data['release_date'] = releaseDate;
     data['title'] = title;
     data['video'] = video;
@@ -48,7 +49,7 @@ class MarvelFilmModel extends MarvelFilmEntity {
       originalTitle: map['original_title'],
       overview: map['overview'],
       popularity: map['popularity'],
-      posterPath: map['poster_path'],
+      posterPath: 'https://image.tmdb.org/t/p/w500${map['poster_path']}',
       releaseDate: map['release_date'],
       title: map['title'],
       video: map['video'],

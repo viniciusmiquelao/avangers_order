@@ -6,6 +6,7 @@ import 'package:avangers_order/src/ui/blocs/states/base_page_state.dart';
 import 'package:avangers_order/src/ui/pages/home/home_bloc.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hive_test/hive_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 class UsecaseMock extends Mock implements IMarvelFilmsUsecase {}
@@ -15,9 +16,10 @@ main() {
   late HomeBloc blocMock;
 
   group('[UI] - RegisterHomeBloc', () {
-    setUp(() {
+    setUp(() async {
       usecase = UsecaseMock();
       blocMock = HomeBloc(usecase);
+      await setUpTestHive();
     });
 
     blocTest<HomeBloc, BaseState>(
